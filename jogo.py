@@ -28,5 +28,18 @@ else:
         break
     
     #verifica se é numero
-    (resposta.isdigit() and not (resposta.startswith("-" and resposta [1:].isdigit()):print("porfavor, digite um numero ou 'sair'."))
+    if not resposta.isdigit() and not (resposta.startswith("-") and resposta [1:].isdigit()):print("porfavor, digite um numero ou 'sair'.")
+    continue
+
+if int (resposta) == resultado_certo:
+    pontos += 1
+    print("correto!")
+else:
+    print(f"errado! a resposta correta era {resultado_correto}.")
+    
+    rodada += 1
+    time.sleep(1)
+    print("-"*30)
+    
+    print(f"\n fim de jogo! voce fez {pontos} ponto{s}.")
     
